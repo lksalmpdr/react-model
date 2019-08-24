@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 80px;
+}
+
+.App-header {
+  background: linear-gradient(to bottom right, #0066ff 0%, #009999 86%);
+  height: 190px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.pull-left{
+  position: absolute;
+
+}
