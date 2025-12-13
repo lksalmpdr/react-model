@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import './SideMenu.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons'
-import Ajuda from '../Ajuda/Ajuda'
 
 class SideMenu extends Component {
     handleClose(e)
@@ -15,10 +13,14 @@ class SideMenu extends Component {
     
     handleAjuda(e){
         e.preventDefault();
-        ReactDOM.render(<Ajuda />, document.getElementById('conteudo'));
+        if (this.props.onContentViewChange) {
+            this.props.onContentViewChange('ajuda');
+        }
         var fechar = document.getElementsByClassName('closebtn');
-        fechar.click;
-}
+        if (fechar.length > 0) {
+            fechar[0].click();
+        }
+    }
 
     render()
     {
